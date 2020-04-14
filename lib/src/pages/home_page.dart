@@ -15,6 +15,7 @@ class HomePage extends StatelessWidget {
 
   Widget _createList() {
     return FutureBuilder(
+      initialData: [],
       future: menuProvider.loadData(),
       builder: (BuildContext context, AsyncSnapshot<List<dynamic>> snapshot) {
         return ListView(
